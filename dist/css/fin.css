@@ -1,0 +1,23 @@
+body{
+  background-color: black;
+}
+
+.body{
+  position: relative;
+}
+a{
+  position: absolute;
+}
+#casino,#opera{
+  top: 20%;
+}
+#casino{
+  left: 10%;
+}
+#opera{
+  left: 75%;
+}
+#fin{
+  top: 60%;
+  left: 45%;
+}

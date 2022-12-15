@@ -1,0 +1,90 @@
+
+body{
+  background-color: black;
+}
+.body{
+  position: absolute;
+  z-index: 1;
+}
+body a{
+  position: absolute;
+}
+.casino a,#start a{
+  position: static;
+}
+ul{
+  display: flex;
+  justify-content: space-around;
+}
+p,li{
+  color:white;
+}
+#casino,#opera{
+  top: 40%;
+}
+#casino{
+  left: 20%;
+}
+#opera{
+  left: 60%;
+}
+#finRech{
+  top: 40%;
+  left:60%;
+}
+#fin{
+  top: 60%;
+  left: 40%;
+}
+@media screen and (max-width:900px) {
+  video{
+    width: 100%;
+  }
+}
+
+#start{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.main p{
+  width:60%;
+}
+
+button{
+  background-color: lightblue;
+  border: solid red;
+  border-radius: 10px;
+  font-size: 40px;
+}
+
+.controls{
+  background-color: grey;
+  display: none;
+  width: 100%;
+  bottom: 0;
+  left:0;
+  position: absolute;
+  z-index: 2;
+}
+
+.controls *{
+  z-index:3;
+}
+
+.body:hover .controls{
+  display:flex;
+  justify-content: space-between;
+}
+
+.controls button{
+  background: none;
+  font-size: 22px;
+  border: 1px solid black;
+}
