@@ -16,6 +16,10 @@ function introEnded(){
   operaA.href = "opera.html";
   casinoA.href = "casino.html";
 
+  media = document.querySelector("video");
+  casinoB.style.width=media.style.width;
+  operaB.style.width=media.style.width;
+
   let body=document.querySelector('.body');
   casinoA.appendChild(casinoB);
   operaA.appendChild(operaB);
@@ -29,7 +33,7 @@ function playerStart(){
   playButton = document.createElement("button");
   stopButton = document.createElement("button");
   media = document.querySelector("video");
-
+  media.style.width= '80%';
   media.removeAttribute("controls");
   //body.addEventListener('click',pausePlay);
 
@@ -40,9 +44,9 @@ function playerStart(){
   stopButton.addEventListener('click',finishVideo);
 
   bar.classList.add("controls");
-
   bar.appendChild(playButton);
   bar.appendChild(stopButton);
+  bar.style.width = media.style.width;
   body.appendChild(bar);
 }
 
