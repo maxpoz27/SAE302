@@ -35,11 +35,16 @@ function playerStart(){
   media = document.querySelector("video");
   media.style.width= '80%';
   media.removeAttribute("controls");
+
   //body.addEventListener('click',pausePlay);
 
   stopButton.innerHTML = "passer a l'etape suivant";
   playButton.innerHTML ="P";
-
+  media.muted = true;
+  console.log(media.muted);
+  media.play();
+  media.muted = false;
+  media.volume =0.1;
   playButton.addEventListener('click',pausePlay);
   stopButton.addEventListener('click',finishVideo);
 
@@ -62,13 +67,23 @@ function finishVideo(){
 
 function finOpera() {
   let div = document.createElement("div");
-  div.innerHTML='<a href="casino.html" id="casino"><button>Aller au casino</button></a><a href="fin.html" id="finRech"><button>Recherche fini</button></a>';
+  div.innerHTML='<a href="casino.html" id="casino"><button>Aller au casino</button></a><a href="code.html" id="finRech"><button>Recherche fini</button></a>';
   document.querySelector('.body').appendChild(div);
 
 }
 
 function fin(){
   let div = document.createElement("div");
-  div.innerHTML='<a href="casino.html" id="casino"><button>Aller au casino</button></a><a href="opera.html" id="opera"><button>Aller a l\'opera</button></a><a  id="fin"><button>Saisir le code</button></a>';
+  div.id='finDiv';
+  div.innerHTML='<h3 id="fin">Merci pour votre participation dans notre web-documentaire</h3>';
   document.querySelector('.body').appendChild(div);
+}
+function verifCode(){
+  let el = document.querySelector('#code');
+  console.log(el.value);
+  if (el.value === '1234'){
+    window.location.href = "conclusion.html";
+  }else{
+    console.log("Wrong code,try again");
+  }
 }

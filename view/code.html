@@ -2,27 +2,25 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
     <link rel="stylesheet" href="../dist/css/index.css">
   </head>
-  <body onload="playerStart()">
+  <body>
+
     <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="intro.html">Intro</a></li>
+        <li><a href="intro.html">Introduction</a></li>
         <li><a href="casino.html">Casino</a></li>
         <li><a href="opera.html">Opera</a></li>
-        <li><a href="fin.html">Fin</a></li>
       </ul>
     </nav>
-    <div class="body">
-      <video src="placeholder.mp4" onended="fin()">
-
-      </video>
-
+    <div class="intro">
+      <input type="text" id="code" placeholder="Entrez 4 chiffres">
+      <button type="button" onclick="verifCode()" name="button">Verifier le code</button>
     </div>
-    <script type="text/javascript" src="../dist/js/intro.js">
+
+    <script src="../dist/js/intro.js">
 
     </script>
   </body>

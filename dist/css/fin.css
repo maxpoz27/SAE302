@@ -5,7 +5,7 @@ body{
 .body{
   position: relative;
 }
-a{
+#finDiv{
   position: absolute;
 }
 #casino,#opera{

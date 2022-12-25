@@ -6,13 +6,16 @@ body{
   position: absolute;
   z-index: 1;
   width: 100%;
-
   display:flex;
   justify-content:center;
   align-items: center;
 }
 body a{
   position: absolute;
+}
+p a{
+  position:relative;
+  color : grey;
 }
 .casino a,#start a{
   position: static;
@@ -21,8 +24,11 @@ ul{
   display: flex;
   justify-content: space-around;
 }
-p,li a{
+p,li a,h1,h2,h3,h4{
   color:white;
+}
+#finDiv{
+  position: absolute;
 }
 #casino,#opera{
   top: 40%;
@@ -51,6 +57,7 @@ p,li a{
 }
 .intro{
   display: flex;
+
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -59,6 +66,7 @@ p,li a{
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .main{
   display: flex;
@@ -66,8 +74,8 @@ p,li a{
   flex-direction: column;
   justify-content: center;
 }
-p{
-  width:60%;
+.intro div{
+  width:70%;
 }
 
 button{
