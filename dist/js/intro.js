@@ -1,30 +1,30 @@
 let playButton;
 let media;
 let stopButton;
-
+let width = "80%";
 function introEnded(){
   let casinoB=document.createElement('button');
   let operaB=document.createElement('button');
   let casinoA=document.createElement('a');
   let operaA=document.createElement('a');
+  let divBut = document.createElement('div');
   casinoB.innerText="Aller au casino";
-  operaB.innerText="Aller a l'opera";
-  casinoA.style.top = "40%";
-  casinoA.style.left = "60%";
-  operaA.style.top = "40%";
-  operaA.style.left = "20%";
+  operaB.innerText="Aller à l'opera";
+  divBut.style.width = width;
+  divBut.classList = "buttons";
   operaA.href = "opera.html";
   casinoA.href = "casino.html";
 
   media = document.querySelector("video");
-  casinoB.style.width=media.style.width;
-  operaB.style.width=media.style.width;
+
 
   let body=document.querySelector('.body');
   casinoA.appendChild(casinoB);
   operaA.appendChild(operaB);
-  body.appendChild(casinoA);
-  body.appendChild(operaA);
+  divBut.appendChild(casinoA);
+  divBut.appendChild(operaA);
+  body.appendChild(divBut);
+
 }
 
 function playerStart(){
@@ -33,18 +33,17 @@ function playerStart(){
   playButton = document.createElement("button");
   stopButton = document.createElement("button");
   media = document.querySelector("video");
-  media.style.width= '80%';
+  media.style.width= width;
   media.removeAttribute("controls");
 
   //body.addEventListener('click',pausePlay);
 
-  stopButton.innerHTML = "passer a l'etape suivant";
-  playButton.innerHTML ="P";
+  stopButton.innerHTML = "Passer a l'etape suivant";
+  playButton.innerHTML ="Play";
   media.muted = true;
-  console.log(media.muted);
   media.play();
   media.muted = false;
-  media.volume =0.1;
+  media.volume =1.0;
   playButton.addEventListener('click',pausePlay);
   stopButton.addEventListener('click',finishVideo);
 
@@ -65,9 +64,11 @@ function finishVideo(){
 }
 
 
-function finOpera() {
+function finCasino() {
   let div = document.createElement("div");
-  div.innerHTML='<a href="casino.html" id="casino"><button>Aller au casino</button></a><a href="code.html" id="finRech"><button>Recherche fini</button></a>';
+  div.innerHTML='<a href="opera.html" id="opera"><button>Aller à l\'opera</button></a><a href="code.html" id="finRech"><button>Recherche fini</button></a>';
+  div.style.width = width;
+  div.classList = "buttons";
   document.querySelector('.body').appendChild(div);
 
 }
@@ -81,7 +82,7 @@ function fin(){
 function verifCode(){
   let el = document.querySelector('#code');
   console.log(el.value);
-  if (el.value === '1234'){
+  if (el.value === '6338'){
     window.location.href = "conclusion.html";
   }else{
     console.log("Wrong code,try again");

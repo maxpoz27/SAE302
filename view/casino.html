@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VichyCulture.fr - Visite d'opera de Vichy</title>
+    <meta name="description" content="Visitez le Grand casino de Vichy avec notre guide. Vous allez apprendre beaucoup de nouveaux choses sur son histoire, ainsi que sur ">
     <link rel="stylesheet" href="../dist/css/index.css">
-    <title>VichyCulture.fr - Visite du casino de Vichy </title>
-    <meta name="description" content="">
   </head>
-  <body>
+  <body onload="playerStart()">
     <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
@@ -16,11 +16,11 @@
         <li><a href="opera.html">Opera</a></li>
       </ul>
     </nav>
-    <div class="main">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <div class="casino">
-        <a href="opera.html"><button>Aller a l'opera</button></a><a href="code.html"><button>Recherche fini</button></a>
-      </div>
+    <div class="body">
+      <video src="./videos/casino.mp4"  onended="finCasino()"></video>
     </div>
+  <script type="text/javascript" src="../dist/js/intro.js">
+
+  </script>
   </body>
 </html>

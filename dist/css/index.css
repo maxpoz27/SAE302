@@ -10,15 +10,22 @@ body{
   justify-content:center;
   align-items: center;
 }
-body a{
+.buttons{
+  display: flex;
+  justify-content: space-around;
   position: absolute;
 }
 p a{
   position:relative;
   color : grey;
 }
-.casino a,#start a{
+#start a{
   position: static;
+}
+.casino{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 ul{
   display: flex;
@@ -30,29 +37,15 @@ p,li a,h1,h2,h3,h4{
 #finDiv{
   position: absolute;
 }
-#casino,#opera{
-  top: 40%;
-}
-#casino{
-  left: 20%;
-}
-#opera{
-  left: 60%;
-}
-#finRech{
-  top: 40%;
-  left:60%;
-}
-#fin{
-  top: 60%;
-  left: 40%;
-}
-@media screen and (max-width:1300px) {
+@media screen and (max-width:766px) {
   video{
     width: 100%;
   }
   .controls{
     width: 100%;
+  }
+  #finDiv{
+    width:80%;
   }
 }
 .intro{
