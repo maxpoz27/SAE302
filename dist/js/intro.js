@@ -36,7 +36,6 @@ function playerStart(){
   media.style.width= width;
   media.removeAttribute("controls");
 
-  //body.addEventListener('click',pausePlay);
 
   stopButton.innerHTML = "Passer a l'etape suivant";
   playButton.innerHTML ="Play";
